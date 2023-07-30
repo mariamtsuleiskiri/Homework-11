@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <script>
+            /*  1) Let user get sum and product of entered numbers
+
+            let num1 = prompt('Please enter the first number');
+            let num2 = prompt('Please enter the second number');
+            let number1 = Number(num1);
+            let number2 = Number(num2);
+            alert(`The sum of your numbers is ${number1 + number2}`);
+            alert(`The product of your numbers is ${number1 * number2}`);
+             */
+            
+            
+            /* 2)  ავხსენი , დამახსოვრებაში და გააზრებაში მეხმარება  :დ
+            alert(a); = 2 -- because of  c= ++a prefix increment value got increased right away
+            alert(c); = 3 -- c became 2 after c=++a but also after
+            let d=c++ , c gets incremented by one and is shown as 3 after we alert it
+            alert(d++); = 2 -- because when we let d = c++ it captured the current value of c
+            which was 2 at the time and even after we increment c or decrement it and 
+            even alert it and see it is 3 it doesn't matter cos
+            d has captured value 2, d++ won't show incrementation right away because
+            it's a postfix and we will have to alert d one more time
+            for us to see incrementation.
+            */
+            /* 3)
+            alert(5 > 4); -- true 
+            alert("apple" > "pineapple"); -- false , a has index of 97 and p has 112
+            so pineapple is bigger than apple from the first letter
+            alert("2"> "12"); -- true , 2 has 50 and 1 has 49
+            alert(undefined == null ); -- true, for a non strict check they are equal
+            alert(undefined === null); -- false, for a strict check they aren't equal
+            alert(null == "0"); -- false, because in comparison == null and undefined equal each other
+            and nothing else, even tho null is converted to 0 when converted to a number
+            alert( null === + "0"); -- false, data types are different
+            */
+
+            /* 5)
+            alert(null || 2 || undefined); -- true and returns 2 , because 2 is true
+            alert( 1 && null && 2); -- null , because 1 truthy and null is falsy and when i finds falsy it evalueates falsy
+            alert( null || 2 && 3 || 4); -- and operators evaluate first so 2 && 3 are both true and 3 is evaluated
+            between null || 3 || 4 the first found truthy is 3 so it returns 3 
+            alert( !1 && !2 || 3); -- != evaluates first so !1 && !2 are both false and  && evaluates to false
+            and between false or || 3 3 is truthy so alert -- 3;
+            */
+
+            // ორჯერ რო შემყავდა escape პაროლში ან იუზერში else ად აღიქვამდა და რაც დავსერჩე trim() გამოვიყენე//
+            let username = prompt('Please input your username');
+            if (username === "Admin") {
+                let password = prompt('Please enter your password');
+                if (password === "TheMaster") {alert("Welcome!");}
+                else if (password === "") {alert("Canceled");}
+                else if (password === null || (password.trim()==="")) {alert("Canceled");}
+                else { 
+                    alert("Wrong password");
+
+                }
+            }
+            else if (username === ""){alert("Canceled.");
+            }
+            else if (username === null || (username.trim() ==="")){alert("Canceled.");
+            }
+            else {
+                alert("I don't know you");
+            }
+            
+
+
+        </script>
+    </body>
+</html>
